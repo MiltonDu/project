@@ -1,26 +1,51 @@
 public class Main {
     public static void main(String[] args) {
+        //Variable universal
+        int numero = 0;
+        var estacion = "otoño";
 
-        coche miCoche = new coche();
-        miCoche.aumentarPuertas();
-        System.out.println("Numero de puertas: "+ miCoche.puerta);
+        //If
+        if(numero > 0){
+            System.out.println("Es positivo: " + numero);
+        } else if (numero < 0) {
+            System.out.println("Es negativo: "+ numero);
+        } else {
+            System.out.println("Es neutro: " + numero);
+        }
 
-        int param_a = 5;
-        int param_b = 6;
-        int param_c = 7;
-        var resultado = suma(param_a, param_b, param_c);
-        System.out.println("Suma = "+ resultado);
-    }
+        //While
+        while (numero > 3){
+            System.out.println(numero);
+            numero--;
+        }
 
-    public static int suma (int a, int b, int c){
-        return a + b + c;
-    }
-}
+        //Do while
+        do {
+            System.out.println(numero);
+            numero--;
+        } while (numero > 3);
 
-class coche {
-    public int puerta = 0;
+        //For
+        for (; numero <= 3; numero++){
+            System.out.println(numero);
+        }
 
-    public void aumentarPuertas(){
-        this.puerta++;
+        //Case
+        switch (estacion){
+            case "verano":
+                System.out.println("Es " + estacion);
+                break;
+            case "otoño":
+                System.out.println("Es " + estacion);
+                break;
+            case "invierno":
+                System.out.println("Es " + estacion);
+                break;
+            case "primavera":
+                System.out.println("Es " + estacion);
+                break;
+            default:
+                System.out.println("No es una estación " + estacion);
+        }
     }
 }
