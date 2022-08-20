@@ -1,51 +1,39 @@
 public class Main {
     public static void main(String[] args) {
-        //Variable universal
-        int numero = 0;
-        var estacion = "otoño";
+        Persona persona = new Persona();
 
-        //If
-        if(numero > 0){
-            System.out.println("Es positivo: " + numero);
-        } else if (numero < 0) {
-            System.out.println("Es negativo: "+ numero);
-        } else {
-            System.out.println("Es neutro: " + numero);
-        }
+        persona.setEdad("27");
+        System.out.println("Mi edad es: " + persona.getEdad());
 
-        //While
-        while (numero > 3){
-            System.out.println(numero);
-            numero--;
-        }
+        persona.setNombre("Milton Durand");
+        System.out.println("Mi nombre es: " + persona.getNombre());
 
-        //Do while
-        do {
-            System.out.println(numero);
-            numero--;
-        } while (numero > 3);
+        persona.setTelefono("950167330");
+        System.out.println("Mi telefono es: " + persona.getTelefono());
+    }
+}
 
-        //For
-        for (; numero <= 3; numero++){
-            System.out.println(numero);
-        }
+class Persona {
+    private String edad, nombre, telefono;
 
-        //Case
-        switch (estacion){
-            case "verano":
-                System.out.println("Es " + estacion);
-                break;
-            case "otoño":
-                System.out.println("Es " + estacion);
-                break;
-            case "invierno":
-                System.out.println("Es " + estacion);
-                break;
-            case "primavera":
-                System.out.println("Es " + estacion);
-                break;
-            default:
-                System.out.println("No es una estación " + estacion);
-        }
+    public void setEdad(String edad){
+        this.edad = edad;
+    }
+    public String getEdad(){
+        return this.edad;
+    }
+
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    public String getNombre(){
+        return  this.nombre;
+    }
+
+    public void setTelefono(String telefono){
+        this.telefono = telefono;
+    }
+    public String getTelefono(){
+        return this.telefono;
     }
 }
