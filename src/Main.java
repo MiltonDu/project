@@ -1,39 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        Persona persona = new Persona();
+        Cliente cliente = new Cliente();
+        cliente.nombre = "Milton Durand";
+        cliente.edad = 27;
+        cliente.telefono = "5776965";
+        cliente.credito = "$1000.00";
 
-        persona.setEdad("27");
-        System.out.println("Mi edad es: " + persona.getEdad());
-
-        persona.setNombre("Milton Durand");
-        System.out.println("Mi nombre es: " + persona.getNombre());
-
-        persona.setTelefono("950167330");
-        System.out.println("Mi telefono es: " + persona.getTelefono());
+        System.out.println(cliente.nombre);
+        System.out.println(cliente.edad);
+        System.out.println(cliente.telefono);
+        System.out.println(cliente.credito);
     }
 }
-
 class Persona {
-    private String edad, nombre, telefono;
+    int edad;
+    String nombre;
+    String telefono;
+}
 
-    public void setEdad(String edad){
-        this.edad = edad;
-    }
-    public String getEdad(){
-        return this.edad;
-    }
+final class Cliente extends Persona {
+    String credito;
+}
 
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-    public String getNombre(){
-        return  this.nombre;
-    }
-
-    public void setTelefono(String telefono){
-        this.telefono = telefono;
-    }
-    public String getTelefono(){
-        return this.telefono;
-    }
+final class Trabajador extends Persona {
+    String salario;
 }
